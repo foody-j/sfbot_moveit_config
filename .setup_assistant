@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: sfbot_can
+    relative_path: description/urdf/sfbot.urdf.xacro
+  srdf:
+    relative_path: config/sfbot.srdf
+  package_settings:
+    author_name: youngjin
+    author_email: heyyoungjin@gmail.com
+    generated_timestamp: 1737695940
