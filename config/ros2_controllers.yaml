@@ -1,7 +1,7 @@
 # sfbot_moveit_config/config>ros2_controllers.yaml
 controller_manager:
   ros__parameters:
-    update_rate: 50  # ros2_control과 동일하게
+    update_rate: 100  # ros2_control과 동일하게
 
     joint_trajectory_controller:  # sfbot_arm_controller 대신
       type: joint_trajectory_controller/JointTrajectoryController
@@ -17,12 +17,12 @@ joint_trajectory_controller:  # sfbot_arm_controller 대신
       - position
     state_interfaces:
       - position
-    action_monitor_rate: 20.0
+    action_monitor_rate: 50.0
     allow_partial_joints_goal: false
-    open_loop_control: false
+    open_loop_control: true
     constraints:
-      stopped_velocity_tolerance: 1.0
-      goal_time: 2.0
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.5
       ak70-10-v1_1_continuous:
-        trajectory: 3.14
-        goal: 3.14
+        trajectory: 3.5
+        goal: 3.5
